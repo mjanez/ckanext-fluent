@@ -25,10 +25,20 @@ The easiest way to use fluent multilingual text fields is with
 Add `ckanext.fluent:presets.json` to your scheming.presets
 configuration settings:
 
-```json
+```ini
 scheming.presets = ckanext.scheming:presets.json
                    ckanext.fluent:presets.json
 ```
+
+An [example schema](https://github.com/ckan/ckanext-fluent/blob/master/ckanext/fluent/fluent_scheming.yaml)
+is may be used with the `scheming_datasets` plugin and this schema setting:
+
+```ini
+scheming.dataset_schemas=ckanext.fluent:fluent_scheming.yaml
+```
+
+This example schema registers a new `fluent-test` dataset type. Visit
+`/fluent-test/new` on your ckan site to create a new dataset with this schema.
 
 ## `fluent_text` fields
 
